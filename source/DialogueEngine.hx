@@ -132,6 +132,98 @@ class DialogueEngine {
                     trace("(play_sound) Could not find file at " + ev.args[0]);
             case 'filter':
                 applyFilter(ev.args[0]);
+			case 'char':
+				createChar(ev.args[0], ev.args[1]);
+			case 'move_char':
+				moveChar(ev.args[0], ev.args[1]);
+			case 'change_char':
+				changeChar(ev.args[0], ev.args[1]);
+			case 'hide_char':
+				hideChar(ev.args[0]);
+			case 'show_char':
+				showChar(ev.args[0]);
+			case 'del_char':
+				delChar(ev.args[0]);
+		}
+	}
+
+	public function createChar(tag:String, graphic:String)
+	{
+		if (!Assets.exists(graphic))
+		{
+			trace("(char) Could not find file at " + graphic);
+			return;
+		}
+		var sprite = new Character();
+		sprite.loadGraphic(graphic);
+		characterTags[tag] = sprite;
+		characters.add(sprite);
+		trace("Hi");
+	}
+
+	public function moveChar(tag:String, location:String)
+	{
+		if (!characterTags.exists(tag))
+		{
+			trace("(move_char) Tag not found");
+			return;
+		}
+		var char = characterTags[tag];
+
+		switch (location)
+		{
+			case 'left':
+				char.x = 0;
+			case 'center':
+				char.screenCenter(X);
+			case 'right':
+				char.x = FlxG.width - char.width;
+		}
+	}
+
+	public function changeChar(tag:String, graphic:String)
+	{
+		if (characterTags.exists(tag))
+			characterTags[tag].loadGraphic(graphic);
+		else
+			trace("(change_char) Tag not found");
+	}
+
+	public function hideChar(tag:String)
+	{
+		if (characterTags.exists(tag))
+		{
+			characterTags[tag].visible = false;
+		}
+		else
+		{
+			trace("(hide_char) Tag not found");
+		}
+	}
+
+	public function showChar(tag:String)
+	{
+		if (characterTags.exists(tag))
+		{
+			characterTags[tag].visible = true;
+		}
+		else
+		{
+			trace("(show_char) Tag not found");
+		}
+	}
+
+	public function delChar(tag:String)
+	{
+		if (characterTags.exists(tag))
+		{
+			characters.remove(characterTags[tag]);
+			characterTags[tag].kill();
+			characterTags.remove(tag);
+		}
+		else
+		{
+			trace("(del_char) Tag not found");
         }
     }
 

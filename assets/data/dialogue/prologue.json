@@ -24,21 +24,107 @@
         },
         {
           "name": "Etsuko",
-          "text": "The lack of affection, attention, recognition makes life a unforgiving hell.",
+          "text": "I wish to be wanted more than anything, to matter to at least someone.",
+          "attrs": [],
+          "events": [
+            {
+              "name": "char",
+              "args": [
+                "mado",
+                "assets/images/mado.jpg"
+              ]
+            }
+          ],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "It's a cruel fate laid upon me, for reasons I cannot comprehend why.",
+          "attrs": [],
+          "events": [
+            {
+              "name": "move_char",
+              "args": [
+                "mado",
+                "right"
+              ]
+            },
+            {
+              "name": "change_char",
+              "args": [
+                "mado",
+                "assets/images/nanami.jpg"
+              ]
+            }
+          ],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Ever since I was a child, I was not given the sufficient amount of affection for proper functioning.",
+          "attrs": [],
+          "events": [
+            {
+              "name": "hide_char",
+              "args": [
+                "mado"
+              ]
+            }
+          ],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "A lonely child, now a lonely adult.",
           "attrs": [],
           "events": [],
           "choices": []
         },
         {
           "name": "Etsuko",
-          "text": "That is ultimately my life. A blatant hell caused by loneliness.",
+          "text": "It truly feels like it won't get better.",
+          "attrs": [],
+          "events": [
+            {
+              "name": "show_char",
+              "args": [
+                "mado"
+              ]
+            }
+          ],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "And it probably won't. I'll probably be like this forever until I eventually pass.",
           "attrs": [],
           "events": [],
           "choices": []
         },
         {
           "name": "Etsuko",
-          "text": "And I'm so tired of it..........................................",
+          "text": "The lack of affection, attention, recognition makes life an unforgiving hell.",
+          "attrs": [],
+          "events": [
+            {
+              "name": "del_char",
+              "args": [
+                "mado"
+              ]
+            }
+          ],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "That is ultimately my life. A blatant hell caused by loneliness and neglect.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "And I'm so tired of it.",
           "attrs": [],
           "events": [],
           "choices": []
@@ -46,6 +132,13 @@
         {
           "name": "Etsuko",
           "text": "Like really tired. Total exhaustion. If how tired I am of being alone and suffering from loneliness was converted into physical fatigue, I wouldn't be able to move a finger even an inch.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "...",
           "attrs": [],
           "events": [],
           "choices": []
@@ -74,6 +167,76 @@
         {
           "name": "Etsuko",
           "text": "It's not fair, it's not fair, it's not fair, it's not fair!!!!!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I HATE IT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I don't like that everyone else gets to be normal and get affection and I don't!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I know it's bad to be jealous or to hate!!! But I just can't help it!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Why'd I have to turn out this way and have these life circumstances?!?!?!?!?!?!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGGGGGGGGGGGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!!!!!!!!!!!!!!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I'm gonna fucking go postal on myself at this point!!!!!!!!!!!!!!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "All. I. Ever. Wanted. Was. To. Be. Wanted!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "AND I'LL NEVER HAVE THAT WILL I!!!!!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGGGGGGGGGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Urghhhhhhhh.........................",
           "attrs": [],
           "events": [],
           "choices": []
@@ -137,6 +300,20 @@
         {
           "name": "DarkAngel",
           "text": "Okay, let us begi-",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Holy shit.",
           "attrs": [],
           "events": [],
           "choices": []

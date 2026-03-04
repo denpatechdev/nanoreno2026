@@ -1,13 +1,30 @@
 ///start
 Etsuko[filter, grain|filter, scanline]: Loneliness is a plague. It's a plague that haunts the heart. It is agonizing.
-Etsuko: The lack of affection, attention, recognition makes life a unforgiving hell.
-Etsuko: That is ultimately my life. A blatant hell caused by loneliness.
-Etsuko: And I'm so tired of it..........................................
+Etsuko[char, mado, assets/images/mado.jpg]: I wish to be wanted more than anything, to matter to at least someone.
+Etsuko[move_char, mado, right|change_char, mado, assets/images/nanami.jpg]: It's a cruel fate laid upon me, for reasons I cannot comprehend why.
+Etsuko[hide_char, mado]: Ever since I was a child, I was not given the sufficient amount of affection for proper functioning.
+Etsuko: A lonely child, now a lonely adult.
+Etsuko[show_char, mado]: It truly feels like it won't get better.
+Etsuko: And it probably won't. I'll probably be like this forever until I eventually pass.
+Etsuko[del_char, mado]: The lack of affection, attention, recognition makes life an unforgiving hell.
+Etsuko: That is ultimately my life. A blatant hell caused by loneliness and neglect.
+Etsuko: And I'm so tired of it.
 Etsuko: Like really tired. Total exhaustion. If how tired I am of being alone and suffering from loneliness was converted into physical fatigue, I wouldn't be able to move a finger even an inch.
+Etsuko: ...
 Etsuko: I don't wanna be lonely anymore!!! I wanna be loved and adored!! So why can't I get that!!!
 Etsuko: It's so tough out here, being a stupid loner girl.........
 Etsuko: AAAAAAAAAAAAAAAAAAGGGGGGGGHHHHHHHHHHHHHHHHHHHH!!!!!!!!!!!!!!!!!!!!!
 Etsuko: It's not fair, it's not fair, it's not fair, it's not fair!!!!!!!!
+Etsuko: I HATE IT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Etsuko: I don't like that everyone else gets to be normal and get affection and I don't!!!!
+Etsuko: I know it's bad to be jealous or to hate!!! But I just can't help it!!!!
+Etsuko: Why'd I have to turn out this way and have these life circumstances?!?!?!?!?!?!!
+Etsuko: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGGGGGGGGGGGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!!!!!!!!!!!!!!!!!
+Etsuko: I'm gonna fucking go postal on myself at this point!!!!!!!!!!!!!!!!!
+Etsuko: All. I. Ever. Wanted. Was. To. Be. Wanted!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Etsuko: AND I'LL NEVER HAVE THAT WILL I!!!!!!!!
+Etsuko: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGGGGGGGGGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Etsuko: Urghhhhhhhh.........................
 Etsuko: I need to distract myself. I need to find something to distract myself. I can't bear with this loneliness any longer!!!!
 COMPUTER[filter, clear]: Notification - DarkAngel is streaming!
 Etsuko: My favorite streamer!!!
@@ -16,6 +33,8 @@ DarkAngel: Hello Darklings! It's your favorite, awesome, kawaii streamer DarkAng
 DarkAngel: In this stream, we're gonna watch Elfen Lead together!!!
 DarkAngel: Make sure to grab your popcorn, pull up the anime on your platform of choice, and get ready to watch it with me!
 DarkAngel: Okay, let us begi-
+Etsuko: ...
+Etsuko: Holy shit.
 Etsuko: I can't believe it took me this long to realize the solution to my loneliness.
 Etsuko: It was right in my face, nearly everyday.
 Etsuko: DarkAngel-chan, she's a streamer. What stops me from being one? nothing

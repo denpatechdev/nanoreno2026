@@ -1,0 +1,24 @@
+///start
+Self[filter, grain|filter, scanline]: Hello, world.
+Self: This is my apparent end.
+Self: There is nothing left for me in this world, at least not anymore...
+Self: I'm really just tired of living.
+Self: Life is extremely exhausting. I don't want to continue.
+Self: I've lost everything that mattered to me...
+Self: My enrollment into an university, my girlfriend...
+Self: And life in general has just been hellish.
+Self: And things don't look like they'll be getting any better, either.
+Self: And I've not found any meaning in living, either.
+Self: So why should I even continue?
+Self: I don't even know why I'm monologuing. I should just...
+-> Die: set_branch, just_die
+-> Shut up: set_branch, shut_up
+///just_die
+Self[set_branch, death]: ...Die...
+///shut_up
+Self: ...Shut up... but I can't.
+Self: I need to tell the world, even if nobody's hearing it, all the struggles it gave me.
+///death
+Self[setfilter, grain, grayscale]: Goodbye, world.
+: END
+///

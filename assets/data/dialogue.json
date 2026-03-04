@@ -1,0 +1,192 @@
+{
+  "dialogue": [
+    {
+      "start": [
+        {
+          "name": "Self",
+          "text": "Hello, world.",
+          "attrs": [],
+          "events": [
+            {
+              "name": "filter",
+              "args": [
+                "grain"
+              ]
+            },
+            {
+              "name": "filter",
+              "args": [
+                "scanline"
+              ]
+            }
+          ],
+          "choices": []
+        },
+        {
+          "name": "Self",
+          "text": "This is my apparent end.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Self",
+          "text": "There is nothing left for me in this world, at least not anymore...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Self",
+          "text": "I'm really just tired of living.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Self",
+          "text": "Life is extremely exhausting. I don't want to continue.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Self",
+          "text": "I've lost everything that mattered to me...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Self",
+          "text": "My enrollment into an university, my girlfriend...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Self",
+          "text": "And life in general has just been hellish.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Self",
+          "text": "And things don't look like they'll be getting any better, either.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Self",
+          "text": "And I've not found any meaning in living, either.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Self",
+          "text": "So why should I even continue?",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Self",
+          "text": "I don't even know why I'm monologuing. I should just...",
+          "attrs": [],
+          "events": [],
+          "choices": [
+            {
+              "text": "Die",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "just_die"
+                ]
+              }
+            },
+            {
+              "text": "Shut up",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "shut_up"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "just_die": [
+        {
+          "name": "Self",
+          "text": "...Die...",
+          "attrs": [],
+          "events": [
+            {
+              "name": "set_branch",
+              "args": [
+                "death"
+              ]
+            }
+          ],
+          "choices": []
+        }
+      ]
+    },
+    {
+      "shut_up": [
+        {
+          "name": "Self",
+          "text": "...Shut up... but I can't.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Self",
+          "text": "I need to tell the world, even if nobody's hearing it, all the struggles it gave me.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        }
+      ]
+    },
+    {
+      "death": [
+        {
+          "name": "Self",
+          "text": "Goodbye, world.",
+          "attrs": [],
+          "events": [
+            {
+              "name": "setfilter",
+              "args": [
+                "grain",
+                "grayscale"
+              ]
+            }
+          ],
+          "choices": []
+        },
+        {
+          "name": "",
+          "text": "END",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        }
+      ]
+    }
+  ],
+  "branches": [
+    "start",
+    "just_die",
+    "shut_up",
+    "death"
+  ]
+}

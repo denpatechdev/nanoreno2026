@@ -1,0 +1,13 @@
+{
+    "defaults": [
+        {
+            "name": "Charlie",
+            "attrs": [
+                {
+                    "name": "color",
+                    "value": "0xFFFFFF"
+                }
+            ]
+        }
+    ]
+}

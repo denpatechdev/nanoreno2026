@@ -1,0 +1,17 @@
+{
+    "name": "Test Scene",
+    "funcs": [
+        {
+            "func": "set_bg",
+            "args": ["assets/images/default_bg.png"]
+        },
+        {
+            "func": "set_bgm",
+            "args": ["assets/music/default_bgm.wav"]
+        },
+        {
+            "func": "set_dialogue",
+            "args": ["assets/data/dialogue.json"]
+        }
+    ]
+}

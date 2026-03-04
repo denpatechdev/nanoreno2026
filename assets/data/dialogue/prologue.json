@@ -1,0 +1,290 @@
+{
+  "dialogue": [
+    {
+      "start": [
+        {
+          "name": "Etsuko",
+          "text": "Loneliness is a plague. It's a plague that haunts the heart. It is agonizing.",
+          "attrs": [],
+          "events": [
+            {
+              "name": "filter",
+              "args": [
+                "grain"
+              ]
+            },
+            {
+              "name": "filter",
+              "args": [
+                "scanline"
+              ]
+            }
+          ],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "The lack of affection, attention, recognition makes life a unforgiving hell.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "That is ultimately my life. A blatant hell caused by loneliness.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "And I'm so tired of it..........................................",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Like really tired. Total exhaustion. If how tired I am of being alone and suffering from loneliness was converted into physical fatigue, I wouldn't be able to move a finger even an inch.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I don't wanna be lonely anymore!!! I wanna be loved and adored!! So why can't I get that!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "It's so tough out here, being a stupid loner girl.........",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "AAAAAAAAAAAAAAAAAAGGGGGGGGHHHHHHHHHHHHHHHHHHHH!!!!!!!!!!!!!!!!!!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "It's not fair, it's not fair, it's not fair, it's not fair!!!!!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I need to distract myself. I need to find something to distract myself. I can't bear with this loneliness any longer!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "COMPUTER",
+          "text": "Notification - DarkAngel is streaming!",
+          "attrs": [],
+          "events": [
+            {
+              "name": "filter",
+              "args": [
+                "clear"
+              ]
+            }
+          ],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "My favorite streamer!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "She's like my idol!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "DarkAngel",
+          "text": "Hello Darklings! It's your favorite, awesome, kawaii streamer DarkAngel-chan!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "DarkAngel",
+          "text": "In this stream, we're gonna watch Elfen Lead together!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "DarkAngel",
+          "text": "Make sure to grab your popcorn, pull up the anime on your platform of choice, and get ready to watch it with me!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "DarkAngel",
+          "text": "Okay, let us begi-",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I can't believe it took me this long to realize the solution to my loneliness.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "It was right in my face, nearly everyday.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "DarkAngel-chan, she's a streamer. What stops me from being one? nothing",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I can get rid of my loneliness. I'll become famous and get all the attention I need.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I'll never feel alone again.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I'm a fucking genius!!!!!!!!!!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "But what'll I call myself... I need a good name",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Hm....",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Hmmmm.........",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Hmmmmmmmmmmmmmmmmmm.......................................",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Aha!! I just got an idea!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Etsuko... plus... kokoro... equals... Etsukokoro!!!!!!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "And I am...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Hmm....",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Can't do an angel... DarkAngel-chan's already one...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Can't do a devil... 'cause  I just don't wanna.......",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Hmmmmmmm...............................",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Why not be myself? I think a menhera's pretty interesting by itself!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I don't need to put any sort of facade... no angel, devil, doggirl, catgirl, anything!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I am Etsukokoro, menhera streamer!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        }
+      ]
+    }
+  ],
+  "branches": [
+    "start"
+  ]
+}

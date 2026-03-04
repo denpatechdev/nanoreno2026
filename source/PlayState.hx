@@ -66,8 +66,8 @@ class PlayState extends FlxState
 		dialogueBg.alpha = .5;
 		characters = new FlxTypedGroup<Character>();
 		bg = new FlxSprite();
-		nameText = new FlxText(20, 20, 0, "Name", 16);
-		dialogueText = new FlxTypeText(20, nameText.y + nameText.height + 16, FlxG.width - 40, "Dialogue text", 16);
+		nameText = new FlxText(20, 20, 0, "Name", 32);
+		dialogueText = new FlxTypeText(20, nameText.y + nameText.height + 32, FlxG.width - 40, "Dialogue text", 32);
 		choices = new FlxTypedGroup<FlxButton>();
 		UIgroup = new FlxGroup();
 

@@ -49,13 +49,20 @@ class DialogueEngine {
 
     public var dialogueFinished:Bool = false;
 
+	public var curFile:String;
+
     public function new(?path:String) {
-        if (path != null) {
+		if (path != null && Assets.exists(path))
+		{
             branches = loadFromFile(path);
             setBranch(startBranch);
             trace(curBranch);
             trace(curIdx);
             trace(curBlock);
+		}
+		else
+		{
+			trace('DialogueEngine.new - File at path $path not found');
         }
     }
 
@@ -312,7 +319,15 @@ class DialogueEngine {
     }
 
     public function loadFromFile(path:String) {
+		if (!Assets.exists(path))
+		{
+			trace('DialogueEngine.loadFromFile - File at ${path} not found');
+			return null;
+		}
+
         var ret:Map<String, Array<DialogueBlock>> = [];
+
+		curFile = path;
 
         var jsonData = Json.parse(Assets.getText(path));
         var allDialogue:Array<Dynamic> = jsonData.dialogue;

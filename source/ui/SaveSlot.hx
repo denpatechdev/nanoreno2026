@@ -1,5 +1,6 @@
 package ui;
 
+import data.Save;
 import data.SceneData;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -12,16 +13,17 @@ class SaveSlot extends FlxSpriteGroup {
     public var saveSlotText:FlxText;
     public var sceneText:FlxText;
 
-    public var saveSlot:Int;
+	public var saveSlot:String;
     public var sceneName:String;
 
-    public function new(x:Float, y:Float, SaveSlot:Int) {
+	public function new(x:Float, y:Float, SaveSlot:String)
+	{
         super(x, y);
-        saveSlot = SaveSlot;
-
-        trace(FlxG.save.data.saves);
-        if (FlxG.save.data.saves != null && FlxG.save.data.saves[saveSlot] != null) {
-            sceneName = FlxG.save.data.saves[saveSlot].data.scene;
+		saveSlot = SaveSlot;
+		// trace("Save Data: ", FlxG.save.data.saves);
+		if (FlxG.save.data.saves != null && FlxG.save.data.saves.get(saveSlot) != null)
+		{
+			sceneName = FlxG.save.data.saves.get(saveSlot).data.scene;
         } else {
             sceneName = "No Scene";
         }
@@ -29,8 +31,9 @@ class SaveSlot extends FlxSpriteGroup {
         saveSlotText = new FlxText(20, 20, 0, 'Slot ${saveSlot}', 48);
         saveSlotText.color = FlxColor.BLACK;
         var timeSaved = 0;
-        if (FlxG.save.data.saves != null && FlxG.save.data.saves[saveSlot] != null) {
-            timeSaved = FlxG.save.data.saves[saveSlot].timeSaved;
+		if (FlxG.save.data.saves != null && FlxG.save.data.saves.get(saveSlot) != null)
+		{
+			timeSaved = FlxG.save.data.saves.get(saveSlot).timeSaved;
         }
         sceneText = new FlxText(20, saveSlotText.y + saveSlotText.height + 16, sceneName, 32);
         if (timeSaved != 0)
@@ -54,15 +57,19 @@ class SaveSlot extends FlxSpriteGroup {
 
             if (FlxG.mouse.justPressed) {
                 clickedThis = true;
-                var saveData = PlayState.instance.createSaveData();
-                trace(saveData);
-                FlxG.save.data.saves[saveSlot] = {
+				var saveData = PlayState.instance.createSaveData();
+				var thing:Map<String, Save> = FlxG.save.data.saves;
+				thing.set(saveSlot, {
                     data: saveData,
                     timeSaved: Date.now().getTime()
-                };
-                FlxG.save.flush();
-                trace(FlxG.save.data, 'Lol');
-                var timeSaved = FlxG.save.data.saves[saveSlot].timeSaved;
+				});
+				FlxG.save.data.saves = thing;
+				FlxG.save.flush();
+				var timeSaved = 0;
+				if (FlxG.save.data.saves != null && FlxG.save.data.saves.get(saveSlot) != null)
+				{
+					timeSaved = FlxG.save.data.saves.get(saveSlot).timeSaved;
+				}
                 sceneText.text = saveData.scene + ' (${DateTools.format(Date.fromTime(timeSaved), "%Y-%m-%d %H:%M:%S")})';
             }
 

@@ -62,10 +62,7 @@ class DialogueEngine {
 		if (path != null && Assets.exists(path))
 		{
             branches = loadFromFile(path);
-            setBranch(startBranch);
-            trace(curBranch);
-            trace(curIdx);
-            trace(curBlock);
+			setBranch(startBranch);
 		}
 		else
 		{

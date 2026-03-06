@@ -47,7 +47,6 @@ class PlayState extends FlxState
 		super.create();
 		init();
 		initCams();
-		trace(createSaveData());
 	}
 
 	function preInit(statePath:String) {

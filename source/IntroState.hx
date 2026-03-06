@@ -62,13 +62,12 @@ class IntroState extends FlxState {
     }
 
     function init() {
-        FlxG.save.bind('nanoreno2026', 'denpatech');
-		trace("DIE!!!!");
+		FlxG.save.bind('nanoreno2026', 'denpatech');
 		if (FlxG.save.data.saves == null)
 		{
-			trace("KILL YOURSELF!!!!");
-			FlxG.save.data.saves = new Map<Int, Save>();
+			FlxG.save.data.saves = new Map<String, Save>();
 			FlxG.save.flush();
 		}
+		FlxG.save.flush();
     }
 }

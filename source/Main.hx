@@ -1,6 +1,6 @@
 package;
 
-// import djFlixel.D;
+import djFlixel.D;
 import flixel.FlxGame;
 import openfl.display.Sprite;
 

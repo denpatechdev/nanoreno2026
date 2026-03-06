@@ -14,11 +14,11 @@ class SaveSubstate extends FlxSubState {
 
     override function create() {
         super.create();
-        var slot1 = new SaveSlot(60, 60, 1);
+		var slot1 = new SaveSlot(60, 60, "1");
         add(slot1);
-        var slot2 = new SaveSlot(60, slot1.y+slot1.height+50, 2);
+		var slot2 = new SaveSlot(60, slot1.y + slot1.height + 50, "2");
         add(slot2);
-        var slot3 = new SaveSlot(60, slot2.y+slot2.height+50, 3);
+		var slot3 = new SaveSlot(60, slot2.y + slot2.height + 50, "3");
         add(slot3);
         trace("SAVEDATA\n",FlxG.save.data);
         PlayState.instance.camera.filtersEnabled = false;

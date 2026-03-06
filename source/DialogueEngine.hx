@@ -1,5 +1,6 @@
 package;
 
+import data.SaveData;
 import data.dialogue.DialogueData.Choice;
 import data.dialogue.DialogueData.DialogueBlock;
 import data.dialogue.DialogueData.DialogueEvent;
@@ -26,6 +27,11 @@ class DialogueEngine {
     public var startBranch:String = "start";
     public var branches:Map<String, Array<DialogueBlock>> = []; 
     
+	public var bgPath:String;
+	public var bgmPath:String;
+	public var dialoguePath:String;
+	public var filterNames:Array<String> = [];
+
     public var curIdx:Int = 0;
     public var curBranchName:String;
 	public var curBranch:Array<DialogueBlock> = [];
@@ -161,11 +167,10 @@ class DialogueEngine {
 			trace("(char) Could not find file at " + graphic);
 			return;
 		}
-		var sprite = new Character();
+		var sprite = new Character(tag);
 		sprite.loadGraphic(graphic);
 		characterTags[tag] = sprite;
 		characters.add(sprite);
-		trace("Hi");
 	}
 
 	public function moveChar(tag:String, location:String)
@@ -327,7 +332,7 @@ class DialogueEngine {
 
         var ret:Map<String, Array<DialogueBlock>> = [];
 
-		curFile = path;
+		dialoguePath = path;
 
         var jsonData = Json.parse(Assets.getText(path));
         var allDialogue:Array<Dynamic> = jsonData.dialogue;
@@ -365,4 +370,28 @@ class DialogueEngine {
         }
     }
 
+	public function createSaveData()
+	{
+		var charactersMap:Map<String, CharacterData> = [];
+		for (k => v in characterTags)
+		{
+			charactersMap[k] = {
+				characterName: v.name,
+				expression: v.expression,
+				position: v.position
+			};
+		}
+
+		var saveData:SaveData = {
+			bg: bgPath,
+			bgm: bgmPath,
+			characters: charactersMap,
+			dialogueFile: dialoguePath,
+			branch: curBranchName,
+			dialogueIdx: curIdx,
+			filters: filterNames
+		}
+
+		return saveData;
+	}
 }

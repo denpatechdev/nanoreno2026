@@ -20,7 +20,7 @@ class SceneLoader {
     var characters:FlxTypedGroup<Character>;
     var filters:Array<FilterThing> = [];
 
-    var data:SceneData;
+	public var data:SceneData;
 
     public function new(?path:String) {
         if (path != null) {
@@ -39,13 +39,19 @@ class SceneLoader {
         for (fn in funcs) {
             switch (fn.func) {
             case 'set_bg':
-                if (Assets.exists(fn.args[0]))
+					if (Assets.exists(fn.args[0]))
+					{
                     bg.loadGraphic(fn.args[0]);
+						PlayState.instance.engine.bgPath = fn.args[0];
+					}
                 else
                     trace("(set_bg) Could not find file at " + fn.args[0]);
             case 'set_bgm':
-                if (Assets.exists(fn.args[0]))
+					if (Assets.exists(fn.args[0]))
+					{
                     FlxG.sound.playMusic(fn.args[0]);
+						PlayState.instance.engine.bgmPath = fn.args[0];
+					}
                 else
                     trace("(set_bgm) Could not find file at " + fn.args[0]);
             }

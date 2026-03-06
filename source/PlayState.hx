@@ -1,8 +1,7 @@
 package;
 
+import data.SaveData;
 import data.StateData;
-import djFlixel.D;
-import djFlixel.ui.FlxToast;
 import filters.FilterThing;
 import flixel.FlxCamera;
 import flixel.FlxG;
@@ -48,6 +47,7 @@ class PlayState extends FlxState
 		super.create();
 		init();
 		initCams();
+		trace(createSaveData());
 	}
 
 	function preInit(statePath:String) {
@@ -99,6 +99,12 @@ class PlayState extends FlxState
 	{
 		super.update(elapsed);
 
+		if (FlxG.keys.justPressed.S)
+		{
+			UIcam.visible = false;
+			openSubState(new SaveSubstate());
+		}
+
 		updateDialogue();
 		updateFilters(elapsed);
 	}
@@ -114,4 +120,32 @@ class PlayState extends FlxState
 			engine.progressDialogue();
 		}
 	}
+	public function createSaveData()
+	{
+		var charactersMap:Map<String, CharacterData> = [];
+		for (k => v in engine.characterTags)
+		{
+			charactersMap[k] = {
+				characterName: v.name,
+				expression: v.expression,
+				position: v.position
+			};
+		}
+
+		var saveData:SaveData = {
+			scene: loader.data.name,
+			bg: engine.bgPath,
+			bgm: engine.bgmPath,
+			characters: charactersMap,
+			dialogueFile: engine.dialoguePath,
+			branch: engine.curBranchName,
+			dialogueIdx: engine.curIdx,
+			filters: engine.filterNames,
+			vars: engine.varsMap
+		};
+
+		return saveData;
+	}
+
+	public function loadSaveData() {}
 }

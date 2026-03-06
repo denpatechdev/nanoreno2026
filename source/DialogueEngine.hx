@@ -49,6 +49,7 @@ class DialogueEngine {
     public var characters:FlxTypedGroup<Character>;
     public var characterTags:Map<String, Character> = [];
     public var filters:Array<FilterThing> = [];
+	public var varsMap:Map<String, Dynamic> = [];
 
     public var typingDone:Bool = true;
     public var selectingChoices:Bool = false;
@@ -370,28 +371,7 @@ class DialogueEngine {
         }
     }
 
-	public function createSaveData()
-	{
-		var charactersMap:Map<String, CharacterData> = [];
-		for (k => v in characterTags)
-		{
-			charactersMap[k] = {
-				characterName: v.name,
-				expression: v.expression,
-				position: v.position
-			};
-		}
-
-		var saveData:SaveData = {
-			bg: bgPath,
-			bgm: bgmPath,
-			characters: charactersMap,
-			dialogueFile: dialoguePath,
-			branch: curBranchName,
-			dialogueIdx: curIdx,
-			filters: filterNames
-		}
-
-		return saveData;
+	function loadSaveData() {
+        
 	}
 }

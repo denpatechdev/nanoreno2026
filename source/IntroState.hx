@@ -1,7 +1,7 @@
 package;
 
+import data.Save;
 import data.SaveData;
-import djFlixel.ui.FlxToast;
 import flixel.FlxG;
 import flixel.FlxState;
 import flixel.text.FlxText;
@@ -36,28 +36,10 @@ class IntroState extends FlxState {
         addText(.9, "Built with\n");
         addText(1, "HaxeFlixel\n");
         addText(1.1, "Made for\n");
-        addText(1.2, "The 2026 NaNoRenO game jam\n");
-        addText(1.3, '----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------');
-        addText(1.4, randText());
-        addText(1.5, randText());
-        addText(1.6, randText());
-        addText(1.7, randText());
-        addText(1.8, randText());
-        addText(1.9, randText());
-        addText(2, randText());
-        addText(2.1, randText());
-        addText(2.2, randText());
-        addText(2.3, randText());
-        addText(2.4, randText());
-        addText(2.5, randText());
-        addText(2.6, randText());
-        addText(2.7, randText());
-        addText(2.8, randText());
-        addText(2.9, randText());
-        addText(3, randText());
-        addText(3.1, randText());
-        addText(3.2, randText());
-        new FlxTimer().start(3.3, _ -> {
+		addText(1.2, "The 2026 NaNoRenO game jam\n");
+		addText(1.3, '----------------------------------------------------------------------------------------------------------');
+		new FlxTimer().start(2.6, _ ->
+		{
             FlxG.switchState(() -> new PlayState());
         });
         super.create();
@@ -81,9 +63,12 @@ class IntroState extends FlxState {
 
     function init() {
         FlxG.save.bind('nanoreno2026', 'denpatech');
-        if (FlxG.save.data.saves == null) {
-            FlxG.save.data.saves = new Array<SaveData>();
-            FlxG.save.flush();
-        }
+		trace("DIE!!!!");
+		if (FlxG.save.data.saves == null)
+		{
+			trace("KILL YOURSELF!!!!");
+			FlxG.save.data.saves = new Map<Int, Save>();
+			FlxG.save.flush();
+		}
     }
 }

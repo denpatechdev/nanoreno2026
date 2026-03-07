@@ -201,6 +201,4 @@ class PlayState extends FlxState
 
 		return saveData;
 	}
-
-	public function loadSaveData() {}
 }

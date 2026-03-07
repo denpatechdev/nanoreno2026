@@ -40,7 +40,7 @@ class IntroState extends FlxState {
 		addText(1.3, '----------------------------------------------------------------------------------------------------------');
 		new FlxTimer().start(2.6, _ ->
 		{
-            FlxG.switchState(() -> new PlayState());
+			FlxG.switchState(() -> new MainMenuState());
         });
         super.create();
     }

@@ -2,6 +2,7 @@ package;
 
 import data.Save;
 import data.SaveData;
+import data.Settings;
 import flixel.FlxG;
 import flixel.FlxState;
 import flixel.text.FlxText;
@@ -75,6 +76,16 @@ class IntroState extends FlxState {
 			FlxG.save.data.saves = new Map<String, Save>();
 			FlxG.save.flush();
 		}
+		if (FlxG.save.data.settings == null)
+		{
+			var defaultSettings:Settings = {
+				defaultTypingSpeed: 1 / 26,
+				textBGColor: "0x000000",
+				textColor: "0xFFFFFF"
+			}
+			FlxG.save.data.settings = defaultSettings;
+		}
+        
 		FlxG.save.flush();
     }
 }

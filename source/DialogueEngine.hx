@@ -95,7 +95,7 @@ class DialogueEngine {
 		}
 		trace(curBlock, 'THE CUR BLOCK');
 
-        var typingSpeed = defaultTypingSpeed;
+		var typingSpeed = FlxG.save.data.settings.defaultTypingSpeed;
         for (attr in curBlock.attrs) {
             if (attr.name == "typing_speed") {
                 typingSpeed = attr.value;

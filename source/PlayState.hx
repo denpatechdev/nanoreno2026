@@ -102,12 +102,14 @@ class PlayState extends FlxState
 	}
 
 	function init() {
-		dialogueBg = new FlxSprite().makeGraphic(FlxG.width, Std.int(FlxG.height / 2), FlxColor.BLACK);
+		dialogueBg = new FlxSprite().makeGraphic(FlxG.width, Std.int(FlxG.height / 2), FlxColor.fromString(FlxG.save.data.settings.textBGColor));
 		dialogueBg.alpha = .5;
 		characters = new FlxTypedGroup<Character>();
 		bg = new FlxSprite();
 		nameText = new FlxText(20, 20, 0, "Name", 32);
+		nameText.color = FlxColor.fromString(FlxG.save.data.settings.textColor);
 		dialogueText = new FlxTypeText(20, nameText.y + nameText.height + 32, FlxG.width - 40, "Dialogue text", 32);
+		dialogueText.color = FlxColor.fromString(FlxG.save.data.settings.textColor);
 		choices = new FlxTypedGroup<FlxButton>();
 		UIgroup = new FlxGroup();
 		add(bg);

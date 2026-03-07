@@ -86,7 +86,15 @@ class DialogueEngine {
         }
     }
 
-    public function runDialogue() {
+	public function runDialogue(?idx:Null<Int> = null)
+	{
+		if (idx != null)
+		{
+			curBlock = curBranch[curIdx];
+			curChoices = curBlock.choices;
+		}
+		trace(curBlock, 'THE CUR BLOCK');
+
         var typingSpeed = defaultTypingSpeed;
         for (attr in curBlock.attrs) {
             if (attr.name == "typing_speed") {
@@ -275,6 +283,8 @@ class DialogueEngine {
                 trace("(filter) Filter " + filterName + " not found");
             
         }
+
+		filterNames.push(filterName);
 
         var actualFilters:Array<BitmapFilter> = [];
         for (i in filters) {

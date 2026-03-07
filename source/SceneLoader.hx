@@ -25,7 +25,7 @@ class SceneLoader {
     public function new(?path:String) {
         if (path != null) {
             data = dataFromPath(path);
-            trace(data);
+			PlayState.instance.sceneName = data.name;
         }
     }
 

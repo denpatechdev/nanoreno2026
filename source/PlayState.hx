@@ -1,5 +1,6 @@
 package;
 
+import LoadSubState.LoadSubstate;
 import data.SaveData;
 import data.StateData;
 import filters.FilterThing;
@@ -34,11 +35,16 @@ class PlayState extends FlxState
 	public var UIgroup:FlxGroup;
 	public var UIcam:FlxCamera;
 
+	public var saveSlot:String;
+	public var sceneName:String;
+
 	public static var instance:PlayState;
 
-	public function new(?statePath:String) {
+	public function new(?statePath:String, ?saveSlot:String = null)
+	{
 		super();
 		instance = this;
+		this.saveSlot = saveSlot;
 		preInit(statePath);
 	}
 
@@ -50,17 +56,49 @@ class PlayState extends FlxState
 	}
 
 	function preInit(statePath:String) {
-		var stateData:StateData;
-		if (statePath == null || !Assets.exists(statePath)) {
-			stateData = cast Json.parse(Assets.getText("assets/data/state.json"));
-			trace("statePath is null or points to non-existent file");
-		} else {
-			stateData = cast Json.parse(Assets.getText(statePath)); 
+		if (saveSlot == null)
+		{
+			var stateData:StateData;
+			if (statePath == null || !Assets.exists(statePath))
+			{
+				stateData = cast Json.parse(Assets.getText("assets/data/state.json"));
+				trace("statePath is null or points to non-existent file");
+			}
+			else
+			{
+				stateData = cast Json.parse(Assets.getText(statePath));
+			}
+			var scenePath = stateData.scene;
+			var dialoguePath = stateData.dialogue;
+			loader = new SceneLoader(scenePath);
+			engine = new DialogueEngine(dialoguePath);
 		}
-		var scenePath = stateData.scene;
-		var dialoguePath = stateData.dialogue;
-		loader = new SceneLoader(scenePath);
-		engine = new DialogueEngine(dialoguePath);
+		else
+		{
+			if (FlxG.save.data.saves.exists(saveSlot))
+			{
+				var saveData:SaveData = FlxG.save.data.saves.get(saveSlot).data;
+				trace(saveData, ",_, the save data ok");
+				trace(saveData.dialogueFile);
+				engine = new DialogueEngine(saveData.dialogueFile);
+				engine.curIdx = saveData.dialogueIdx;
+				if (saveData.filters != null)
+				{
+					for (f in saveData.filters)
+					{
+						engine.applyFilter(f);
+					}
+				}
+				if (saveData.vars != null)
+				{
+					engine.varsMap = saveData.vars;
+				}
+			}
+			else
+			{
+				saveSlot = null;
+			}
+		}
 	}
 
 	function init() {
@@ -80,11 +118,23 @@ class PlayState extends FlxState
 		UIgroup.add(dialogueText);
 		UIgroup.add(choices);
 
-		loader.bind(nameText, dialogueText, choices, bg, characters, filters);
+		if (loader != null)
+			loader.bind(nameText, dialogueText, choices, bg, characters, filters);
 		engine.bind(nameText, dialogueText, choices, bg, characters, filters);
 		
-		loader.loadScene();
-		engine.runDialogue();
+		var savedIdx:Null<Int> = null;
+
+		if (saveSlot != null)
+		{
+			var saveData:SaveData = FlxG.save.data.saves.get(saveSlot).data;
+			bg.loadGraphic(saveData.bg);
+			FlxG.sound.playMusic(saveData.bgm);
+			savedIdx = saveData.dialogueIdx;
+		}
+
+		if (loader != null)
+			loader.loadScene();
+		engine.runDialogue(savedIdx);
 	}
 
 	function initCams() {
@@ -102,6 +152,12 @@ class PlayState extends FlxState
 		{
 			UIcam.visible = false;
 			openSubState(new SaveSubstate());
+		}
+
+		if (FlxG.keys.justPressed.L)
+		{
+			UIcam.visible = false;
+			openSubState(new LoadSubstate());
 		}
 
 		updateDialogue();
@@ -132,7 +188,7 @@ class PlayState extends FlxState
 		}
 
 		var saveData:SaveData = {
-			scene: loader.data.name,
+			scene: sceneName,
 			bg: engine.bgPath,
 			bgm: engine.bgmPath,
 			characters: charactersMap,

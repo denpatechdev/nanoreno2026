@@ -9,7 +9,10 @@ class Character extends FlxSprite {
 
 	public var assetsPath:String;
 	public var expressionMap:Map<String, String> = [];
+
 	public var defaultY:Float;
+	public var defaultExpression:String = "idle";
+
 
 	public function new(name:String)
 	{

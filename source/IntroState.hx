@@ -59,6 +59,13 @@ class IntroState extends FlxState {
 
     override function update(elapsed:Float) {
         super.update(elapsed);
+		#if debug
+		if (FlxG.keys.justPressed.C)
+		{
+			FlxG.save.erase();
+			FlxG.resetState();
+		}
+		#end
     }
 
     function init() {

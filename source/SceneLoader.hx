@@ -55,6 +55,7 @@ class SceneLoader {
                 else
                     trace("(set_bgm) Could not find file at " + fn.args[0]);
             }
+			// too lazy to implement filter cmd here lol
         }
     }
 

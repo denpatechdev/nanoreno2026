@@ -119,6 +119,15 @@ class DialogueEngine {
 
     function handleEvent(ev:DialogueEvent, ?isChoice:Bool = false) {
         switch (ev.name) {
+			case 'load_state':
+				if (Assets.exists(ev.args[0]))
+				{
+					FlxG.switchState(() -> new PlayState(ev.args[0]));
+				}
+				else
+				{
+					trace('(load_state) File not found at ${ev.args[0]}');
+				}
             case 'set_branch':
             if (branches.exists(ev.args[0])) {
                     if (!isChoice) {

@@ -56,11 +56,8 @@ class LoadSlot extends FlxSpriteGroup {
             }
 
             if (FlxG.mouse.justPressed) {
-                FlxG.switchState(() -> new PlayState(null, saveSlot));
-            }
-
-            if (FlxG.mouse.pressed) {
-                theDefault();
+				if (FlxG.save.data.saves.get(saveSlot) != null)
+					FlxG.switchState(() -> new PlayState(null, saveSlot));
             }
 
             hovering = true;

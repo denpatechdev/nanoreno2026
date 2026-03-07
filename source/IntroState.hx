@@ -23,10 +23,9 @@ class IntroState extends FlxState {
 
     override function create() {
         FlxG.sound.play('assets/sounds/startup.mp3');
-        introText = new FlxText(20, 20, 0, "", 32);
-        randTextArray = Assets.getText("assets/data/introText.txt").split('\n');
+		introText = new FlxText(20, 20, FlxG.width - 40, "", 32);
         add(introText);
-        addText(.1, "GAME NAME HERE\n");
+		addText(.1, "Menhera no Stream\n");
         addText(.2, "Made by\n");
         addText(.3, "denpatech");
         addText(.4, ", Chaos");
@@ -37,8 +36,8 @@ class IntroState extends FlxState {
         addText(.9, "Built with\n");
         addText(1, "HaxeFlixel\n");
         addText(1.1, "Made for\n");
-		addText(1.2, "The 2026 NaNoRenO game jam\n");
-		addText(1.3, '----------------------------------------------------------------------------------------------------------');
+		addText(1.2, "The 2026 NaNoRenO game jam\n\n");
+		addText(1.3, '-------------------------------------------------------------------------------------------------');
 		new FlxTimer().start(2.6, _ ->
 		{
 			FlxG.switchState(() -> new MainMenuState());

@@ -14,9 +14,9 @@ class CreditsState extends FlxState {
             ["denpatech", "Programmer and Writer", "https://x.com/denpatech"],
 			["c3ntaureajuno", "Artist", "https://itch.io/profile/c3ntaureajuno"],
 			["lemma", "Writer", "https://itch.io/profile/lemma42"],
-            ["borgarlover", "Writer", ""],
+			["borgarlover", "Writer", "https://borgarlover.itch.io/"],
             ["spuds", "Artist", ""],
-            ["Krystian", "Composer", ""]
+			["Krystian", "Composer", "https://open.spotify.com/artist/00ST2tnvDk5snHIxbcMukQ"]
         ];
     }
 
@@ -52,7 +52,6 @@ class CreditsState extends FlxState {
 				{
 					for (c in creditsArray)
 					{
-						trace(t.text == c[0]);
 						// whatever
 						if (t.text.split(' ')[0] == c[0])
 						{

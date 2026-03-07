@@ -29,7 +29,7 @@ class LoadSubstate extends FlxSubState
 
 	override function update(elapsed:Float)
 	{
-		if (FlxG.keys.justPressed.ENTER)
+		if (FlxG.keys.justPressed.ESCAPE)
 		{
 			PlayState.instance.UIcam.visible = true;
 			PlayState.instance.camera.filtersEnabled = true;

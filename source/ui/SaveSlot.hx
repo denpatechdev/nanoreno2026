@@ -73,10 +73,6 @@ class SaveSlot extends FlxSpriteGroup {
                 sceneText.text = saveData.scene + ' (${DateTools.format(Date.fromTime(timeSaved), "%Y-%m-%d %H:%M:%S")})';
             }
 
-            if (FlxG.mouse.pressed) {
-                theDefault();
-            }
-
             hovering = true;
         } else if (!FlxG.mouse.overlaps(this)) {
             hovering = false;

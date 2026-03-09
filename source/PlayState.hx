@@ -26,7 +26,7 @@ class PlayState extends FlxState
 	public var dialogueBg:FlxSprite;
 	public var nameText:FlxText;
     public var dialogueText:FlxTypeText;
-    public var choices:FlxTypedGroup<FlxButton>;
+	public var choices:FlxTypedGroup<StupidButton>;
     public var bg:FlxSprite;
     public var characters:FlxTypedGroup<Character>;
 	public var filters:Array<FilterThing> = [];
@@ -61,7 +61,7 @@ class PlayState extends FlxState
 			var stateData:StateData;
 			if (statePath == null || !Assets.exists(statePath))
 			{
-				stateData = cast Json.parse(Assets.getText("assets/data/state.json"));
+				stateData = cast Json.parse(Assets.getText("assets/data/states/qa_stream.json"));
 				trace("statePath is null or points to non-existent file");
 			}
 			else
@@ -110,7 +110,7 @@ class PlayState extends FlxState
 		nameText.color = FlxColor.fromString(FlxG.save.data.settings.textColor);
 		dialogueText = new FlxTypeText(20, nameText.y + nameText.height + 32, FlxG.width - 40, "Dialogue text", 32);
 		dialogueText.color = FlxColor.fromString(FlxG.save.data.settings.textColor);
-		choices = new FlxTypedGroup<FlxButton>();
+		choices = new FlxTypedGroup<StupidButton>();
 		UIgroup = new FlxGroup();
 		add(bg);
 		add(characters);

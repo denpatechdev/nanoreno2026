@@ -23,16 +23,16 @@ class IntroState extends FlxState {
 
     override function create() {
         FlxG.sound.play('assets/sounds/startup.mp3');
-		introText = new FlxText(20, 20, FlxG.width - 40, "", 32);
+		introText = new FlxText(20, 20, 0, "", 32);
         add(introText);
 		addText(.1, "Menhera no Stream\n");
         addText(.2, "Made by\n");
         addText(.3, "denpatech");
-        addText(.4, ", Chaos");
+		addText(.4, ", c3ntaureajuno");
         addText(.5, ", lemma");
-        addText(.6, ",\nKrystian");
+		addText(.6, ",\nKrystian Sokolowski");
         addText(.7, ", borgarlover");
-        addText(.8, ", spuds\n");
+		addText(.8, ", TimeForSP\n");
         addText(.9, "Built with\n");
         addText(1, "HaxeFlixel\n");
         addText(1.1, "Made for\n");

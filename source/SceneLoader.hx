@@ -15,7 +15,7 @@ class SceneLoader {
 
     var nameText:FlxText;
     var dialogueText:FlxTypeText;
-    var choices:FlxTypedGroup<FlxButton>;
+	var choices:FlxTypedGroup<StupidButton>;
     var bg:FlxSprite;
     var characters:FlxTypedGroup<Character>;
     var filters:Array<FilterThing> = [];
@@ -59,7 +59,9 @@ class SceneLoader {
         }
     }
 
-    public function bind(NameText:FlxText, DialogueText:FlxTypeText, Choices:FlxTypedGroup<FlxButton>, BG:FlxSprite, Characters:FlxTypedGroup<Character>, Filters:Array<FilterThing>) {
+	public function bind(NameText:FlxText, DialogueText:FlxTypeText, Choices:FlxTypedGroup<StupidButton>, BG:FlxSprite, Characters:FlxTypedGroup<Character>,
+			Filters:Array<FilterThing>)
+	{
         nameText = NameText;
         dialogueText = DialogueText;
         choices = Choices;

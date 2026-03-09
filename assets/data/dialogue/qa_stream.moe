@@ -1,0 +1,140 @@
+///start
+Etsuko: Hello my little hearts! Etsukokoro, menhera streamer, here!
+Etsuko: Today, I'm doing a Q&A. Superchats get priority! And I've got a surprise
+Etsuko: I basically got into stardom by just cutting myself on stream... 
+Etsuko: So for every $100 donation, I'm gonna cut myself!!!!
+Etsuko[notif, anaiva11, $100, cut urself onegai shimasu]: ...So every $100 is gonna be a cut on my arm this stream! Kyun~!
+Etsuko: A $100 superchat already?!
+->Cut: set_branch, cut1
+->Don't cut: set_branch, game_over
+///cut1
+Etsuko: Okay!
+Etsuko: Itee... That one was a little more deeper than I intended... heh...
+Etsuko: Feels good seeing the blood drip down my arm...
+Etsuko[set_branch, stream1]: You guys are probably getting off to this aren't you? Pervs...
+///stream1
+Etsuko[notif, andydandy15, $25, Why'd u become a streamer?]: But that's okay!! As long as you stay a loyal viewer!!
+Etsuko: Good question!!
+Etsuko: 'Cause loneliness is agonizing!!
+Etsuko: As a child, my parents were always away on business trips.
+Etsuko: They'd never have time for me...
+Etsuko: Whenever they were free, they'd say they were too tired to even talk with me...
+Etsuko: And whenever I cried, they just told me I'm too needy and spoiled!
+Etsuko: I guess I can't really blame them...
+Etsuko: I was born in the aftermath of the Suzuki Crisis, so things were really tough economically and they had to work their assess off for a feasible living...
+Etsuko: But still...
+Etsuko: And I never really had any friends either, barely anybody at school or in my neighborhood wanted to hang out with me...
+Etsuko: And in the rare times someone would talk with me and try to be my friend, they'd end up leaving me!
+Etsuko: Telling me I'm too weird and clingy! 
+Etsuko: The loneliness made me want to kill myself.
+Etsuko: I spent my days watching streamers to distract myself from the pain of loneliness
+Etsuko: And even though it took me a while, 'cause I'm retarded or something, I finally realized the solution to my loneliness!
+Etsuko: Becoming a streamer myself!
+Etsuko: I could be the one getting all that love and attention!
+Etsuko: And money too! Maybe I can stop having to depend on an allowance from my parents!!
+Etsuko[notif, ProjectAlice, $100, Cut yourself more, stupid foid.]: Every single viewer makes me happy!
+Etsuko: That's a little mean...
+Etsuko: But...
+->Cut: set_branch, cut2
+->Don't cut: set_branch, game_over
+///cut2
+Etsuko: Ahhh... that was a good one...
+Etsuko[set_branch, stream2]: Look at how it bleeds... so beautiful...
+///stream2
+Etsuko[notif, $50, kuronekosan, what's your favorite videogame?]: Haaaaaaa... feels ecstatic cutting in front of so many people...
+Etsuko: I've always liked videogames where the protag can die in several ways.
+Etsuko: Whenever I'd get overwhelmed, I would play those games just to see the protag die over and over again.
+Etsuko: Neck-breaking, blown-into-smithereens-ing, shot-in-the-heart-ing, and more.
+Etsuko: I could do that too... Just end it all...
+Etsuko: I live quite a few stories high... it'd all be so quick
+Etsuko: But I've endured! And with the ecstasy of strangers' attention, I don't need to die anymore!
+Etsuko: I really like games with sexy female protags too!
+Etsuko: Not 'cause I'd self-insert myself into them, and imagine I'm a sexy girl too, but cause they'd die!
+Etsuko: I can't get to be all athletic and hot like, lets say, Lara Croft, so in trade, she gets to die!
+Etsuko: Again and again!!!
+Etsuko: I'd make her drown on purpose.
+Etsuko[notif, nakukoroni, $100,  cutcutcutcutcutcutcutcutcutcutcutcut]: Just to watch her gasp for air!
+->Cut: set_branch, cut3
+->Don't cut: set_branch, game_over
+///cut3
+Etsuko[set_branch, stream3|notif, inkcel01, $80, Are you single?]: Ahhhh....
+///stream3
+Etsuko: Yeah, I'm single!
+Etsuko: Love's more than a drug to me, it's more like oxygen... I depend on it.
+Etsuko: If there was liquid love, I'd inject so much of it into me.
+Etsuko: I did have a boyfriend, once.
+Etsuko: I thought he was such a nice guy at first.
+Etsuko: I explained that I'm really mentally ill, and he stayed anyway.
+Etsuko: That attention is more important than even eating to me, and I'd be annoyingly clingy.
+Etsuko: It was all fine at the start, but...
+Etsuko: As time went on, he'd respond less frequently, and give more dryer responses.
+Etsuko: And I'd worry that I was an annoyance, a burden to him.
+Etsuko: The thoughts of being hated by the person I loved so dearly got more and more intense, I was going insane.
+Etsuko: I distracted myself from these thoughts by cutting myself all the time.
+Etsuko: I wanted him to understand, to feel the pain I did, I even showed him my scars, how much I cut myself over him.
+Etsuko: I showed how much I broke down over him, how much I loved him, how much I hated the thought of him hating me.
+Etsuko: My life revolved around him, he was my everything!!!
+Etsuko: But I guess I was just disposable to him...
+Etsuko: Because he left me anyway. 
+Etsuko: It's funny, he knew how I was like, 'cause I told him and stuff, and yet he left me and was, in the end, far from accomodating.
+Etsuko: He said it was fine, but I guess not.
+Etsuko: I wonder if he wanted me to suffer.
+Etsuko: It took me so long to move on. And I felt like I deserved all the pain.
+Etsuko: The question wasn't if I deserved it, but what I did to deserve it; what did I do that made everything go so downhill.
+Etsuko[notif, madonanami, $1000, cut yourself 10 times ^o^]: I'm so surprised I didn't end up killing myself over him. I'm somehow still here after all that I went through.
+->Cut: set_branch, cut4
+->Don't cut: set_branch, game_over
+///cut4
+Etsuko:Haaa...
+->Cut: set_branch, cut5
+->Don't cut: set_branch, game_over
+///cut5
+Etsuko:Itee...
+->Cut: set_branch, cut6
+->Don't cut: set_branch, game_over
+///cut6
+Etsuko:Uwaa.....
+->Cut: set_branch, cut7
+->Don't cut: set_branch, game_over
+///cut7
+Etsuko:Ow...
+Etsuko: That went a little too deep...
+->Cut: set_branch, cut8
+->Don't cut: set_branch, game_over
+///cut8
+Etsuko:Uun...
+->Cut: set_branch, cut9
+->Don't cut: set_branch, game_over
+///cut9
+Etsuko:Guu......
+->Cut: set_branch, cut10
+->Don't cut: set_branch, game_over
+///cut10
+Etsuko:Waa...
+->Cut: set_branch, cut11
+->Don't cut: set_branch, game_over
+///cut11
+Etsuko:Ugyu...
+->Cut: set_branch, cut12
+->Don't cut: set_branch, game_over
+///cut12
+Etsuko:Ubeee...
+Etsuko: 1 more cut...
+->Cut: set_branch, cut13
+->Don't cut: set_branch, game_over
+///cut13
+Etsuko: Huff... huff...
+Etsuko: 13 cuts...
+Etsuko: Thank you for the money and attention, my dear hearts!!
+Etsuko: I feel a little tired after all that... maybe I cut a little too much...
+Etsuko: But I promised to cut for every $100 superchat!!
+Etsuko: I think I'll stop here for now...
+Etsuko: See you all on the next stream!
+Etsuko: Bye neeeee!!!!
+///game_over
+Etsuko: Actually, I don't wanna...
+Etsuko[scammer_scene]: Huh?
+Etsuko: No... I'm not a scammer!
+Etsuko: Please... Don't leave me!
+Etsuko: I...
+///

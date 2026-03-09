@@ -44,7 +44,7 @@ class DialogueEngine {
 
     public var nameText:FlxText;
     public var dialogueText:FlxTypeText;
-    public var choices:FlxTypedGroup<FlxButton>;
+	public var choices:FlxTypedGroup<StupidButton>;
     public var bg:FlxSprite;
     public var characters:FlxTypedGroup<Character>;
     public var characterTags:Map<String, Character> = [];
@@ -79,21 +79,15 @@ class DialogueEngine {
         if (!typingDone) {
             skipDialogue();
         } else if (!selectingChoices && typingDone && curIdx < curBranch.length - 1) {
-            curIdx++;
-            curBlock = curBranch[curIdx];
-            curChoices = curBlock.choices;
+			curIdx++;
             runDialogue();
         }
     }
 
 	public function runDialogue(?idx:Null<Int> = null)
 	{
-		if (idx != null)
-		{
-			curBlock = curBranch[curIdx];
-			curChoices = curBlock.choices;
-		}
-		trace(curBlock, 'THE CUR BLOCK');
+		curBlock = curBranch[curIdx];
+		curChoices = curBlock.choices;
 
 		var typingSpeed = FlxG.save.data.settings.defaultTypingSpeed;
         for (attr in curBlock.attrs) {
@@ -119,14 +113,14 @@ class DialogueEngine {
 
     function handleEvent(ev:DialogueEvent, ?isChoice:Bool = false) {
         switch (ev.name) {
-			case 'load_state':
+			case 'set_state':
 				if (Assets.exists(ev.args[0]))
 				{
 					FlxG.switchState(() -> new PlayState(ev.args[0]));
 				}
 				else
 				{
-					trace('(load_state) File not found at ${ev.args[0]}');
+					trace('(set_state) File not found at ${ev.args[0]}');
 				}
             case 'set_branch':
             if (branches.exists(ev.args[0])) {
@@ -136,7 +130,9 @@ class DialogueEngine {
                     } else {
                         curIdx = 0;
                         curBranch = branches[ev.args[0]];
+						trace(ev);
                         curBlock = curBranch[curIdx];
+						trace(curBlock, 'idxlol', curIdx);
                         curChoices = curBlock.choices;
                         runDialogue();
                     }
@@ -311,6 +307,16 @@ class DialogueEngine {
         });
     }
     
+	public function update()
+	{
+		for (b in choices.members)
+		{
+			if (FlxG.mouse.overlaps(b) && FlxG.mouse.justPressed)
+			{
+				b.cb();
+			}
+		}
+	}
 
     function showChoices() {
         if (curChoices.length == 0) return;
@@ -319,23 +325,22 @@ class DialogueEngine {
         for (i in 0...curChoices.length) {
             var choice = curChoices[i];
 
-            function onChoiceSelect() {
-                handleEvent(choice.event, true);
+			function onChoiceSelect()
+			{		
+
                 for (btn in choices) {
                     btn.kill();
                 }
 
-                choices.clear();
-                curChoices = [];
+				curChoices = [];
+				choices.clear();
                 selectingChoices = false;
+				handleEvent(choice.event, true);
             }
 
-            var btn = new FlxButton(20 + i * 140, dialogueText.y + dialogueText.height + 16, choice.text, onChoiceSelect);
-            @:privateAccess
-            btn.label.color = FlxColor.WHITE;
-            btn.label.size = 16;
-            btn.label.updateHitbox();
-            btn.makeGraphic(Std.int(btn.label.width)+40, Std.int(btn.label.height)+20, FlxColor.TRANSPARENT);
+			var btn = new StupidButton(20 + i * 140, dialogueText.y + dialogueText.height + 16, choice.text);
+			btn.cb = onChoiceSelect;
+			btn.label.updateHitbox();
             choices.add(btn);
         }
     }
@@ -363,6 +368,7 @@ class DialogueEngine {
             }
         }
         branches = ret;
+		trace(ret);
         return ret;
     }
 
@@ -374,7 +380,9 @@ class DialogueEngine {
         curChoices = curBlock.choices;
     }
 
-    public function bind(NameText:FlxText, DialogueText:FlxTypeText, Choices:FlxTypedGroup<FlxButton>, BG:FlxSprite, Characters:FlxTypedGroup<Character>, Filters:Array<FilterThing>) {
+	public function bind(NameText:FlxText, DialogueText:FlxTypeText, Choices:FlxTypedGroup<StupidButton>, BG:FlxSprite, Characters:FlxTypedGroup<Character>,
+			Filters:Array<FilterThing>)
+	{
         nameText = NameText;
         dialogueText = DialogueText;
         choices = Choices;
@@ -383,7 +391,9 @@ class DialogueEngine {
         filters = Filters;
         dialogueText.completeCallback = () -> {
             typingDone = true;
-            showChoices();
+			trace(curChoices, choices.length, 'doneLol');
+			if (choices.length == 0)
+				showChoices();
         }
     }
 

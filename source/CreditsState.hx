@@ -12,11 +12,15 @@ class CreditsState extends FlxState {
         super();
         creditsArray = [
             ["denpatech", "Programmer and Writer", "https://x.com/denpatech"],
-			["c3ntaureajuno", "Artist", "https://itch.io/profile/c3ntaureajuno"],
+			["c3ntaureajuno", "Character Artist", "https://itch.io/profile/c3ntaureajuno"],
 			["lemma", "Writer", "https://itch.io/profile/lemma42"],
 			["borgarlover", "Writer", "https://borgarlover.itch.io/"],
-            ["spuds", "Artist", ""],
-			["Krystian", "Composer", "https://open.spotify.com/artist/00ST2tnvDk5snHIxbcMukQ"]
+			["TimeForSP", "Background Artist", "https://timeforsp.itch.io/"],
+			[
+				"Krystian Sokolowski",
+				"Composer",
+				"https://open.spotify.com/artist/00ST2tnvDk5snHIxbcMukQ"
+			]
         ];
     }
 

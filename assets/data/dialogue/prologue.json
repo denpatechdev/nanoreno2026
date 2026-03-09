@@ -285,7 +285,7 @@
         },
         {
           "name": "DarkAngel",
-          "text": "In this stream, we're gonna watch Elfen Lead together!!!",
+          "text": "In this stream, we're gonna watch Elfen Lied together!!!",
           "attrs": [],
           "events": [],
           "choices": []
@@ -455,7 +455,14 @@
           "name": "Etsuko",
           "text": "I am Etsukokoro, menhera streamer!!!",
           "attrs": [],
-          "events": [],
+          "events": [
+            {
+              "name": "set_state",
+              "args": [
+                "assets/data/states/qa_stream.json"
+              ]
+            }
+          ],
           "choices": []
         }
       ]

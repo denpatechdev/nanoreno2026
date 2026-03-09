@@ -1,0 +1,1097 @@
+{
+  "dialogue": [
+    {
+      "start": [
+        {
+          "name": "Etsuko",
+          "text": "Hello my little hearts! Etsukokoro, menhera streamer, here!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Today, I'm doing a Q&A. Superchats get priority! And I've got a surprise",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I basically got into stardom by just cutting myself on stream...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "So for every $100 donation, I'm gonna cut myself!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "...So every $100 is gonna be a cut on my arm this stream! Kyun~!",
+          "attrs": [],
+          "events": [
+            {
+              "name": "notif",
+              "args": [
+                "anaiva11",
+                "$100",
+                "cut urself onegai shimasu"
+              ]
+            }
+          ],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "A $100 superchat already?!",
+          "attrs": [],
+          "events": [],
+          "choices": [
+            {
+              "text": "Cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "cut1"
+                ]
+              }
+            },
+            {
+              "text": "Don't cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "game_over"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cut1": [
+        {
+          "name": "Etsuko",
+          "text": "Okay!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Itee... That one was a little more deeper than I intended... heh...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Feels good seeing the blood drip down my arm...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "You guys are probably getting off to this aren't you? Pervs...",
+          "attrs": [],
+          "events": [
+            {
+              "name": "set_branch",
+              "args": [
+                "stream1"
+              ]
+            }
+          ],
+          "choices": []
+        }
+      ]
+    },
+    {
+      "stream1": [
+        {
+          "name": "Etsuko",
+          "text": "But that's okay!! As long as you stay a loyal viewer!!",
+          "attrs": [],
+          "events": [
+            {
+              "name": "notif",
+              "args": [
+                "andydandy15",
+                "$25",
+                "Why'd u become a streamer?"
+              ]
+            }
+          ],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Good question!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "'Cause loneliness is agonizing!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "As a child, my parents were always away on business trips.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "They'd never have time for me...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Whenever they were free, they'd say they were too tired to even talk with me...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "And whenever I cried, they just told me I'm too needy and spoiled!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I guess I can't really blame them...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I was born in the aftermath of the Suzuki Crisis, so things were really tough economically and they had to work their assess off for a feasible living...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "But still...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "And I never really had any friends either, barely anybody at school or in my neighborhood wanted to hang out with me...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "And in the rare times someone would talk with me and try to be my friend, they'd end up leaving me!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Telling me I'm too weird and clingy!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "The loneliness made me want to kill myself.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I spent my days watching streamers to distract myself from the pain of loneliness",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "And even though it took me a while, 'cause I'm retarded or something, I finally realized the solution to my loneliness!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Becoming a streamer myself!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I could be the one getting all that love and attention!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "And money too! Maybe I can stop having to depend on an allowance from my parents!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Every single viewer makes me happy!",
+          "attrs": [],
+          "events": [
+            {
+              "name": "notif",
+              "args": [
+                "ProjectAlice",
+                "$100",
+                "Cut yourself more",
+                "stupid foid."
+              ]
+            }
+          ],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "That's a little mean...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "But...",
+          "attrs": [],
+          "events": [],
+          "choices": [
+            {
+              "text": "Cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "cut2"
+                ]
+              }
+            },
+            {
+              "text": "Don't cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "game_over"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cut2": [
+        {
+          "name": "Etsuko",
+          "text": "Ahhh... that was a good one...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Look at how it bleeds... so beautiful...",
+          "attrs": [],
+          "events": [
+            {
+              "name": "set_branch",
+              "args": [
+                "stream2"
+              ]
+            }
+          ],
+          "choices": []
+        }
+      ]
+    },
+    {
+      "stream2": [
+        {
+          "name": "Etsuko",
+          "text": "Haaaaaaa... feels ecstatic cutting in front of so many people...",
+          "attrs": [],
+          "events": [
+            {
+              "name": "notif",
+              "args": [
+                "$50",
+                "kuronekosan",
+                "what's your favorite videogame?"
+              ]
+            }
+          ],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I've always liked videogames where the protag can die in several ways.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Whenever I'd get overwhelmed, I would play those games just to see the protag die over and over again.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Neck-breaking, blown-into-smithereens-ing, shot-in-the-heart-ing, and more.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I could do that too... Just end it all...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I live quite a few stories high... it'd all be so quick",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "But I've endured! And with the ecstasy of strangers' attention, I don't need to die anymore!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I really like games with sexy female protags too!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Not 'cause I'd self-insert myself into them, and imagine I'm a sexy girl too, but cause they'd die!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I can't get to be all athletic and hot like, lets say, Lara Croft, so in trade, she gets to die!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Again and again!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I'd make her drown on purpose.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Just to watch her gasp for air!",
+          "attrs": [],
+          "events": [
+            {
+              "name": "notif",
+              "args": [
+                "nakukoroni",
+                "$100",
+                "cutcutcutcutcutcutcutcutcutcutcutcut"
+              ]
+            }
+          ],
+          "choices": [
+            {
+              "text": "Cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "cut3"
+                ]
+              }
+            },
+            {
+              "text": "Don't cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "game_over"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cut3": [
+        {
+          "name": "Etsuko",
+          "text": "Ahhhh....",
+          "attrs": [],
+          "events": [
+            {
+              "name": "set_branch",
+              "args": [
+                "stream3"
+              ]
+            },
+            {
+              "name": "notif",
+              "args": [
+                "inkcel01",
+                "$80",
+                "Are you single?"
+              ]
+            }
+          ],
+          "choices": []
+        }
+      ]
+    },
+    {
+      "stream3": [
+        {
+          "name": "Etsuko",
+          "text": "Yeah, I'm single!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Love's more than a drug to me, it's more like oxygen... I depend on it.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "If there was liquid love, I'd inject so much of it into me.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I did have a boyfriend, once.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I thought he was such a nice guy at first.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I explained that I'm really mentally ill, and he stayed anyway.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "That attention is more important than even eating to me, and I'd be annoyingly clingy.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "It was all fine at the start, but...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "As time went on, he'd respond less frequently, and give more dryer responses.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "And I'd worry that I was an annoyance, a burden to him.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "The thoughts of being hated by the person I loved so dearly got more and more intense, I was going insane.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I distracted myself from these thoughts by cutting myself all the time.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I wanted him to understand, to feel the pain I did, I even showed him my scars, how much I cut myself over him.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I showed how much I broke down over him, how much I loved him, how much I hated the thought of him hating me.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "My life revolved around him, he was my everything!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "But I guess I was just disposable to him...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Because he left me anyway.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "It's funny, he knew how I was like, 'cause I told him and stuff, and yet he left me and was, in the end, far from accomodating.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "He said it was fine, but I guess not.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I wonder if he wanted me to suffer.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "It took me so long to move on. And I felt like I deserved all the pain.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "The question wasn't if I deserved it, but what I did to deserve it; what did I do that made everything go so downhill.",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I'm so surprised I didn't end up killing myself over him. I'm somehow still here after all that I went through.",
+          "attrs": [],
+          "events": [
+            {
+              "name": "notif",
+              "args": [
+                "madonanami",
+                "$1000",
+                "cut yourself 10 times ^o^"
+              ]
+            }
+          ],
+          "choices": [
+            {
+              "text": "Cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "cut4"
+                ]
+              }
+            },
+            {
+              "text": "Don't cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "game_over"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cut4": [
+        {
+          "name": "Etsuko",
+          "text": "Haaa...",
+          "attrs": [],
+          "events": [],
+          "choices": [
+            {
+              "text": "Cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "cut5"
+                ]
+              }
+            },
+            {
+              "text": "Don't cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "game_over"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cut5": [
+        {
+          "name": "Etsuko",
+          "text": "Itee...",
+          "attrs": [],
+          "events": [],
+          "choices": [
+            {
+              "text": "Cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "cut6"
+                ]
+              }
+            },
+            {
+              "text": "Don't cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "game_over"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cut6": [
+        {
+          "name": "Etsuko",
+          "text": "Uwaa.....",
+          "attrs": [],
+          "events": [],
+          "choices": [
+            {
+              "text": "Cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "cut7"
+                ]
+              }
+            },
+            {
+              "text": "Don't cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "game_over"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cut7": [
+        {
+          "name": "Etsuko",
+          "text": "Ow...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "That went a little too deep...",
+          "attrs": [],
+          "events": [],
+          "choices": [
+            {
+              "text": "Cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "cut8"
+                ]
+              }
+            },
+            {
+              "text": "Don't cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "game_over"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cut8": [
+        {
+          "name": "Etsuko",
+          "text": "Uun...",
+          "attrs": [],
+          "events": [],
+          "choices": [
+            {
+              "text": "Cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "cut9"
+                ]
+              }
+            },
+            {
+              "text": "Don't cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "game_over"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cut9": [
+        {
+          "name": "Etsuko",
+          "text": "Guu......",
+          "attrs": [],
+          "events": [],
+          "choices": [
+            {
+              "text": "Cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "cut10"
+                ]
+              }
+            },
+            {
+              "text": "Don't cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "game_over"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cut10": [
+        {
+          "name": "Etsuko",
+          "text": "Waa...",
+          "attrs": [],
+          "events": [],
+          "choices": [
+            {
+              "text": "Cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "cut11"
+                ]
+              }
+            },
+            {
+              "text": "Don't cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "game_over"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cut11": [
+        {
+          "name": "Etsuko",
+          "text": "Ugyu...",
+          "attrs": [],
+          "events": [],
+          "choices": [
+            {
+              "text": "Cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "cut12"
+                ]
+              }
+            },
+            {
+              "text": "Don't cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "game_over"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cut12": [
+        {
+          "name": "Etsuko",
+          "text": "Ubeee...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "1 more cut...",
+          "attrs": [],
+          "events": [],
+          "choices": [
+            {
+              "text": "Cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "cut13"
+                ]
+              }
+            },
+            {
+              "text": "Don't cut",
+              "event": {
+                "name": "set_branch",
+                "args": [
+                  "game_over"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cut13": [
+        {
+          "name": "Etsuko",
+          "text": "Huff... huff...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "13 cuts...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Thank you for the money and attention, my dear hearts!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I feel a little tired after all that... maybe I cut a little too much...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "But I promised to cut for every $100 superchat!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I think I'll stop here for now...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "See you all on the next stream!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Bye neeeee!!!!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        }
+      ]
+    },
+    {
+      "game_over": [
+        {
+          "name": "Etsuko",
+          "text": "Actually, I don't wanna...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Huh?",
+          "attrs": [],
+          "events": [
+            {
+              "name": "scammer_scene",
+              "args": []
+            }
+          ],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "No... I'm not a scammer!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "Please... Don't leave me!",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        },
+        {
+          "name": "Etsuko",
+          "text": "I...",
+          "attrs": [],
+          "events": [],
+          "choices": []
+        }
+      ]
+    }
+  ],
+  "branches": [
+    "start",
+    "cut1",
+    "stream1",
+    "cut2",
+    "stream2",
+    "cut3",
+    "stream3",
+    "cut4",
+    "cut5",
+    "cut6",
+    "cut7",
+    "cut8",
+    "cut9",
+    "cut10",
+    "cut11",
+    "cut12",
+    "cut13",
+    "game_over"
+  ]
+}
